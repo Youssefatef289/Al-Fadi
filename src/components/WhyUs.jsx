@@ -1,4 +1,4 @@
-const features = [
+﻿const features = [
   {
     icon: 'fa-dollar-sign',
     title: 'البيع بسعر المصنع',
