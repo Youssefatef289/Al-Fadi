@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { logoUrl } from '../data/localImages';
 
 const navLinks = [
-  { name: 'الرئيسية', to: '/' },
+  { name: 'الرئيسية', to: '/#home' },
   { name: 'منتجاتنا', to: '/#products' },
   { name: 'أنواع الخشب', to: '/#wood-types' },
   { name: 'معرض الأعمال', to: '/gallery' },
@@ -28,38 +28,46 @@ export default function Navbar() {
     const active = galleryActive || homeActive;
     if (active) {
       return isScrolled
-        ? 'text-amber-900 font-bold border-b-2 border-amber-700 pb-0.5'
-        : 'text-amber-950 font-bold border-b-2 border-amber-800 pb-0.5 drop-shadow-sm';
+        ? 'text-brand-900 font-bold border-b-2 border-brand-800 pb-0.5'
+        : 'text-brand-950 font-bold border-b-2 border-brand-900 pb-0.5 drop-shadow-sm';
     }
     return isScrolled
-      ? 'text-gray-700 hover:text-amber-900 font-semibold transition-colors'
-      : 'text-amber-950/90 hover:text-amber-900 font-semibold transition-colors drop-shadow-sm';
+      ? 'text-slate-700 hover:text-brand-900 font-semibold transition-colors'
+      : 'text-slate-800/95 hover:text-brand-900 font-semibold transition-colors drop-shadow-sm';
   };
 
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-amber-100/80'
+          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/90'
           : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-3 space-x-reverse group">
+          <Link
+            to="/"
+            className="flex items-center gap-3 space-x-reverse group min-h-[3rem]"
+          >
             {logoUrl ? (
-              <div className="h-14 w-14 sm:h-16 sm:w-16 flex items-center justify-center rounded-lg bg-white shadow-md border border-amber-100 overflow-hidden shrink-0 group-hover:shadow-lg transition-shadow">
-                <img src={logoUrl} alt="الفادي" className="max-h-full max-w-full object-contain p-1" />
-              </div>
+              <img
+                src={logoUrl}
+                alt={'\u0627\u0644\u0641\u0627\u062f\u064a \u0644\u0644\u0623\u0628\u0648\u0627\u0628 \u0627\u0644\u062e\u0634\u0628\u064a\u0629 \u0648\u0627\u0644\u0623\u062b\u0627\u062b'}
+                className=" object-contain object-right drop-shadow-sm"
+                style={{ width: '150px', height: '100px'  }}
+              />
             ) : (
-              <div className="bg-gradient-to-br from-amber-900 to-amber-700 p-3 rounded-lg">
-                <i className="fas fa-door-open text-white text-2xl" />
-              </div>
+              <>
+                <div className="bg-gradient-to-br from-brand-900 to-brand-800 p-3 rounded-lg shadow">
+                  <i className="fas fa-door-open text-white text-2xl" />
+                </div>
+                <div>
+                  <span className="text-2xl font-bold text-slate-900 block">الفادي</span>
+                  <span className="text-xs text-slate-600">للأبواب الخشبية والأثاث</span>
+                </div>
+              </>
             )}
-            <div>
-              <span className="text-2xl font-bold text-amber-900 block">الفادي</span>
-              <span className="text-xs text-gray-600">للأبواب الخشبية والأثاث</span>
-            </div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8 space-x-reverse">
@@ -72,7 +80,7 @@ export default function Navbar() {
               href="https://wa.me/201279781350"
               target="_blank"
               rel="noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full flex items-center gap-2 transition-all"
+              className="flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-2 font-bold text-white antialiased shadow-md shadow-emerald-950/25 transition-all hover:bg-emerald-800"
             >
               <i className="fab fa-whatsapp text-xl" />
               واتساب
@@ -81,7 +89,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className={`md:hidden text-2xl ${isScrolled ? 'text-amber-900' : 'text-amber-950 drop-shadow-sm'}`}
+            className={`md:hidden text-2xl ${isScrolled ? 'text-brand-900' : 'text-slate-900 drop-shadow-sm'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
           >
@@ -98,7 +106,7 @@ export default function Navbar() {
         <div className="p-6">
           <button
             type="button"
-            className="absolute top-6 left-6 text-2xl text-amber-900"
+            className="absolute top-6 left-6 text-2xl text-brand-900"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="إغلاق"
           >
@@ -111,8 +119,8 @@ export default function Navbar() {
                 to={link.to}
                 className={`text-xl font-semibold ${
                   pathname === '/gallery' && link.to === '/gallery'
-                    ? 'text-amber-900'
-                    : 'text-gray-700 hover:text-amber-900'
+                    ? 'text-brand-900'
+                    : 'text-slate-700 hover:text-brand-900'
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -123,7 +131,7 @@ export default function Navbar() {
               href="https://wa.me/201279781350"
               target="_blank"
               rel="noreferrer"
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full flex items-center justify-center gap-2 text-lg"
+              className="flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-lg font-bold text-white antialiased shadow-md shadow-emerald-950/25 transition-all hover:bg-emerald-800"
             >
               <i className="fab fa-whatsapp text-2xl" />
               تواصل عبر واتساب

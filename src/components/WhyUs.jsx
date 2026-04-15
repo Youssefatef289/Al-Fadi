@@ -1,4 +1,4 @@
-﻿const features = [
+const features = [
   {
     icon: 'fa-dollar-sign',
     title: 'البيع بسعر المصنع',
@@ -33,12 +33,12 @@
 
 export default function WhyUs() {
   return (
-    <section className="py-20 bg-gradient-to-b from-amber-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-brand-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">لماذا نحن؟</h2>
-          <div className="w-24 h-1 bg-amber-600 mx-auto mb-6" />
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-900 mb-4">لماذا نحن؟</h2>
+          <div className="w-24 h-1 bg-brand-800 mx-auto mb-6" />
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             نتميز بالعديد من المزايا التي تجعلنا الخيار الأمثل لك
           </p>
         </div>
@@ -51,12 +51,12 @@ export default function WhyUs() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-4">
-                <div className="bg-amber-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <i className={`fas ${feature.icon} text-amber-900 text-xl`} />
+                <div className="bg-brand-100 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i className={`fas ${feature.icon} text-brand-900 text-xl`} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-amber-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-brand-900 mb-2">{feature.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             </div>

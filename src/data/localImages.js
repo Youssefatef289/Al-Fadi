@@ -13,11 +13,21 @@ const entries = Object.entries(modules).map(([path, url]) => ({
   url,
 }));
 
-const isLogoFile = ({ path }) =>
-  /Logo\.(jpg|jpeg|png)$/i.test(path) || path.includes('Logo-removebg');
+const isLogoFile = ({ path }) => {
+  const p = path.toLowerCase();
+  return (
+    /\/logo\.(jpg|jpeg|png)$/i.test(path) ||
+    p.includes('logo-removebg') ||
+    p.includes('logo--removebg') ||
+    /\/logo-.?\.(jpe?g|png)$/i.test(path)
+  );
+};
 
+/** يفضّل شعار الشفافية الجديد ثم القديم */
 export const logoUrl =
+  entries.find(({ path }) => /logo--removebg-preview/i.test(path))?.url ??
   entries.find(({ path }) => path.includes('Logo-removebg-preview'))?.url ??
+  entries.find(({ path }) => /\/Logo\.png$/i.test(path))?.url ??
   entries.find(({ path }) => /\/Logo\.jpg$/i.test(path))?.url ??
   null;
 

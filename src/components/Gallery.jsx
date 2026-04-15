@@ -15,9 +15,9 @@ export default function Gallery() {
     <section id="gallery" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16 scroll-reveal">
-          <h1 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">معرض الأعمال</h1>
-          <div className="w-24 h-1 bg-amber-600 mx-auto mb-6" />
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-900 mb-4">معرض الأعمال</h1>
+          <div className="w-24 h-1 bg-brand-800 mx-auto mb-6" />
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
             استعرض نماذج من أعمالنا المميزة في تصنيع الأبواب والأثاث الخشبي — اضغط على الصورة
             لمشاهدتها بالحجم الكامل
           </p>
@@ -25,7 +25,7 @@ export default function Gallery() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.length === 0 && (
-            <p className="col-span-full text-center text-gray-600 py-12">لا توجد صور في المعرض بعد.</p>
+            <p className="col-span-full text-center text-slate-600 py-12">لا توجد صور في المعرض بعد.</p>
           )}
           {galleryImages.map((image, index) => (
             <div
