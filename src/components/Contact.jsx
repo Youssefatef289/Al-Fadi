@@ -23,7 +23,7 @@ export default function Contact() {
               href="https://wa.me/201279781350"
               target="_blank"
               rel="noreferrer"
-              className="inline-block rounded-full bg-emerald-700 px-6 py-2.5 font-bold text-white antialiased shadow-md shadow-emerald-950/25 transition-all hover:bg-emerald-800"
+              className="inline-block rounded-full border-2 border-emerald-600 bg-white px-6 py-2.5 font-bold text-emerald-700 antialiased shadow-md shadow-slate-300/35 transition-all hover:bg-emerald-50"
             >
               راسلنا على واتساب
             </a>
@@ -39,7 +39,7 @@ export default function Contact() {
             </p>
             <a
               href="tel:01279781350"
-              className="inline-block rounded-full bg-brand-800 px-6 py-2.5 font-bold text-black antialiased shadow-md shadow-brand-950/30 transition-all hover:bg-brand-900"
+              className="inline-block rounded-full border-2 border-brand-800 bg-white px-6 py-2.5 font-bold text-brand-900 antialiased shadow-md shadow-slate-300/35 transition-all hover:bg-brand-50"
             >
               اتصل الآن
             </a>
@@ -73,7 +73,7 @@ export default function Contact() {
             href="https://maps.google.com"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-800 px-8 py-3 text-lg font-bold text-black antialiased shadow-md shadow-brand-950/30 transition-all hover:bg-brand-900"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-brand-800 bg-white px-8 py-3 text-lg font-bold text-brand-900 antialiased shadow-md shadow-slate-300/35 transition-all hover:bg-brand-50"
           >
             <i className="fas fa-map-marked-alt" />
             افتح الموقع على الخريطة

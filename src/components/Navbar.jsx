@@ -59,8 +59,8 @@ export default function Navbar() {
               />
             ) : (
               <>
-                <div className="bg-gradient-to-br from-brand-900 to-brand-800 p-3 rounded-lg shadow">
-                  <i className="fas fa-door-open text-white text-2xl" />
+                <div className="rounded-lg border-2 border-brand-800 bg-white p-3 shadow-md">
+                  <i className="fas fa-door-open text-2xl text-brand-900" />
                 </div>
                 <div>
                   <span className="text-2xl font-bold text-slate-900 block">الفادي</span>
@@ -80,7 +80,7 @@ export default function Navbar() {
               href="https://wa.me/201279781350"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-2 font-bold text-white antialiased shadow-md shadow-emerald-950/25 transition-all hover:bg-emerald-800"
+              className="flex items-center gap-2 rounded-full border-2 border-emerald-600 bg-white px-6 py-2 font-bold text-emerald-700 antialiased shadow-md shadow-slate-300/35 transition-all hover:bg-emerald-50"
             >
               <i className="fab fa-whatsapp text-xl" />
               واتساب
@@ -131,7 +131,7 @@ export default function Navbar() {
               href="https://wa.me/201279781350"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-lg font-bold text-white antialiased shadow-md shadow-emerald-950/25 transition-all hover:bg-emerald-800"
+              className="flex items-center justify-center gap-2 rounded-full border-2 border-emerald-600 bg-white px-6 py-3 text-lg font-bold text-emerald-700 antialiased shadow-md shadow-slate-300/35 transition-all hover:bg-emerald-50"
             >
               <i className="fab fa-whatsapp text-2xl" />
               تواصل عبر واتساب

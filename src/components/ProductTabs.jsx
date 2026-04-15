@@ -58,8 +58,8 @@ export default function ProductTabs() {
               onClick={() => setActiveId(tab.id)}
               className={`px-5 sm:px-8 py-3 rounded-full text-sm sm:text-base font-bold transition-all ${
                 activeId === tab.id
-                  ? 'bg-brand-800 text-black shadow-xl shadow-brand-950/45 ring-2 ring-brand-600/50'
-                  : 'border-2 border-slate-200 bg-white text-slate-900 shadow-md shadow-slate-300/30 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-950 hover:shadow-lg'
+                  ? 'border-2 border-brand-800 bg-white text-brand-900 shadow-lg shadow-slate-400/25 ring-1 ring-brand-200'
+                  : 'border-2 border-slate-200 bg-white text-slate-700 shadow-md shadow-slate-300/30 hover:border-brand-300 hover:bg-brand-50/80 hover:text-brand-900 hover:shadow-lg'
               }`}
             >
               {tab.label}
@@ -91,7 +91,7 @@ export default function ProductTabs() {
                     className="w-full h-full object-cover"
                   />
                   <div className="gallery-overlay rounded-2xl">
-                    <span className="text-white text-sm font-semibold px-3 py-1 bg-brand-900/90 rounded-full">
+                    <span className="rounded-full border border-brand-200 bg-white px-3 py-1 text-sm font-semibold text-brand-900 shadow-sm">
                       المعرض
                     </span>
                   </div>

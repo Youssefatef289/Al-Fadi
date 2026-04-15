@@ -52,16 +52,16 @@ export default function Hero() {
                   href="https://wa.me/201279781350"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-emerald-700 hover:bg-emerald-800 px-8 py-4 text-lg font-bold text-white antialiased shadow-lg shadow-emerald-950/30 inline-flex items-center justify-center gap-3 rounded-full transition-all hover:scale-[1.02]"
+                  className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-emerald-600 bg-white px-8 py-4 text-lg font-bold text-emerald-700 antialiased shadow-md shadow-slate-300/40 transition-all hover:scale-[1.02] hover:bg-emerald-50"
                 >
-                  <i className="fab fa-whatsapp text-2xl text-white" aria-hidden />
+                  <i className="fab fa-whatsapp text-2xl text-emerald-600" aria-hidden />
                   تواصل عبر واتساب
                 </a>
                 <a
                   href="tel:01279781350"
-                  className="bg-brand-800 hover:bg-brand-900 px-8 py-4 text-lg font-bold  antialiased shadow-xl shadow-brand-950/40 ring-2 ring-white/25 inline-flex items-center justify-center gap-3 rounded-full transition-all hover:scale-[1.02]"
+                  className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-brand-800 bg-white px-8 py-4 text-lg font-bold text-brand-900 antialiased shadow-md shadow-slate-300/40 transition-all hover:scale-[1.02] hover:bg-brand-50"
                 >
-                  <i className="fas fa-phone text-2xl" aria-hidden />
+                  <i className="fas fa-phone text-2xl text-brand-900" aria-hidden />
                   اتصل الآن
                 </a>
               </div>
@@ -88,7 +88,7 @@ export default function Hero() {
                 onClick={() => setCurrentSlide(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? 'w-10 bg-brand-900'
+                    ? 'w-10 bg-white ring-2 ring-brand-800 ring-offset-2 ring-offset-slate-50'
                     : 'w-2.5 bg-slate-300 hover:bg-slate-400'
                 }`}
                 aria-label={`شريحة ${index + 1}`}
